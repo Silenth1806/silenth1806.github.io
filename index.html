@@ -193,49 +193,45 @@
 
 <script>
 
-    var imageList = [
-        "https://cdn.discordapp.com/avatars/249287380056539136/4063ea09a551e816d1146398133a1f80.png?size=4096",
-        "https://i.ppy.sh/7dbb6ee0326e685aaf0b271b60f84ba573bc5c0d/687474703a2f2f32352e6d656469612e74756d626c722e636f6d2f30656365336138383963333033663432313664383062306538313132336636392f74756d626c725f6e3269747a64436e4535317338736f746d6f335f3530302e676966",
-        "https://i.pinimg.com/originals/bb/fa/30/bbfa30a752409dc211bda11676d4a2d8.gif",
-        "https://i.imgur.com/gdHaJcx.jpg",
-        "https://i.pinimg.com/originals/25/37/25/2537252d0dbd0fd09f1cea868be20d41.jpg",
-        "https://cdn.discordapp.com/attachments/915716932097966090/1203149291062042644/img.png?ex=65d00b18&is=65bd9618&hm=be05c1cd7396a09cf6061b5632c1f70898315fa625d1a6724ebbee53ec82e08b&",
-        "https://cdn.discordapp.com/attachments/1159361219040378911/1203179490897952788/5uOQDHtn_400x400.png?ex=65d02738&is=65bdb238&hm=5bb4fa644825d8773c4565db88c8e95e3d9a19980c9bd9d492ceb87ac88b51a1&",
-        "https://i.pinimg.com/736x/b7/db/c4/b7dbc466f2c6145c571ea9621e7534d6.jpg",
-        "https://i.pinimg.com/originals/dd/df/07/dddf0763916c977f322ae547d24f1228.jpg",
-        "https://i.pinimg.com/736x/cf/57/d5/cf57d5dfecf4da9705274a5518b7c6cd.jpg",
-        "https://avatarfiles.alphacoders.com/174/174725.jpg",
-        "https://i.pinimg.com/originals/7b/92/7a/7b927a00e2244d770aa90464438aae8f.gif",
-        "https://media.tenor.com/UNIPoE_D4fcAAAAC/envy-fullmetal-alchemist.gif",
-        "https://i.pinimg.com/originals/fb/4f/8a/fb4f8aa282555ce8de74fc6d2bfdd7b8.gif",
-        "https://media1.tenor.com/m/kF_m20pCRzMAAAAC/re-l-ergo-proxy.gif",
-        "https://davedalessiowrites.files.wordpress.com/2022/06/re-l-mayer.jpg",
-        "https://media1.tenor.com/m/oqI6Ds3UFmUAAAAC/lain-iwakura-lain.gif",
-        "https://media.tenor.com/v-d5E2Xnv_sAAAAM/lain-serial-experiments-lain.gif",
-        "https://i.pinimg.com/originals/d7/64/84/d76484f755763b87d45ec9c56e21b37c.gif",
-        "https://i.gifer.com/Bh1c.gif",
-        "https://i.pinimg.com/originals/f6/e3/ba/f6e3ba34ad26ef43ec875b672bd60b39.gif",
-        "https://avatarfiles.alphacoders.com/343/thumb-1920-343549.jpg",
-        "https://cdn.discordapp.com/attachments/1159361219040378911/1203183511553581076/asdf.png?ex=65d02af7&is=65bdb5f7&hm=a3c2fbfc81113298a176dac041b44d430d6195cbc2efef2ba83a81a0ab7c7114&",
-        "https://avatarfiles.alphacoders.com/234/234181.jpg",
-        "https://i.pinimg.com/originals/5d/bb/45/5dbb451fc779ec5b3eb6616e7d6d2e37.jpg",
-        "https://i.pinimg.com/736x/63/49/01/63490196b9a00fe1cf738a292b3f396c.jpg",
-        "https://cdn.discordapp.com/attachments/1159361219040378911/1203183815653064714/c2a643067604bf830651d426da4357cf2c55257a.png?ex=65d02b3f&is=65bdb63f&hm=ef96262c7db5517dd20fe0e85537272d7d40906b338f3720fa3dfe3767fdb6fa&",
-        "https://64.media.tumblr.com/06f939d1d5e159af36b8874b457efb97/90073fa4c16931f9-99/s640x960/189a44081e715fd2021c4e33baf247ca9a9270b1.jpg",
-        "https://static.wikia.nocookie.net/texhnolyze/images/5/57/Yoshii_profile.png/revision/latest?cb=20200402152915",
-        "https://i.pinimg.com/originals/99/57/13/9957137500fdfb610e33fc3bbe760934.jpg",
-        "https://static.wikia.nocookie.net/durarara/images/1/1f/Izaya%27s_Switchblade.jpg/revision/latest?cb=20130625015901",
-        "https://cdn.discordapp.com/attachments/915716932097966090/1203888081674178560/GFigNm5bgAArBnS.png?ex=65d2bb25&is=65c04625&hm=27631d18a27d1b0b8b2fd01bdbe678b6d867098cbab7403bfd59f509b1cda5b4&",
-        "https://cdn.discordapp.com/attachments/915716932097966090/1203888136342609930/GFigNm6bAAA7BHc.png?ex=65d2bb32&is=65c04632&hm=c200d43feaa8a824772ee3de4f67c259302fc77ed2b9467276fc47709a327e46&",
-        "https://cdn.discordapp.com/attachments/915716932097966090/1203913759144550430/m8SCg-0u-Lpz1hOZw7oi77Z8pvEdYgfu7ajLTK5F6frgYR1mauvdo7l6ZOHQG_j9RvT4od5lPD2GyJpwaAw544-h544-l90-rj.png?ex=65d2d30f&is=65c05e0f&hm=a848266fca17333d06337661651c8bbd926c0f877aa680068180fa51dffd0bb6&",
-        "https://cdn.discordapp.com/attachments/915716932097966090/1203913970134818866/artworks-vMHRykQuHyquy9Zy-zgSDKw-t500x500.png?ex=65d2d342&is=65c05e42&hm=99849403be03ae70a2374bd568abe4b44caf66e202aff34ab03f7ab9a37131fa&",
-        "https://cdn.discordapp.com/attachments/915716932097966090/1203914506963783690/latest.png?ex=65d2d3c2&is=65c05ec2&hm=5c52b45bb9552c4ea90332ae7f0ce8cd32419a2ee7250d40d42ab26ef09eaadd&",
-        "https://cdn.discordapp.com/attachments/915716932097966090/1203914635221409873/GADTE7JXwAAu3oB.png?ex=65d2d3e0&is=65c05ee0&hm=2f178693461cf593cdec6a3ffc8d9cb89e9f5e5194e8ad326abc9ff3c46dd237&",
-
-
-    ];
-
     function getRandomImage() {
+        var imageList = [
+            "https://cdn.discordapp.com/avatars/249287380056539136/4063ea09a551e816d1146398133a1f80.png?size=4096",
+            "https://i.ppy.sh/7dbb6ee0326e685aaf0b271b60f84ba573bc5c0d/687474703a2f2f32352e6d656469612e74756d626c722e636f6d2f30656365336138383963333033663432313664383062306538313132336636392f74756d626c725f6e3269747a64436e4535317338736f746d6f335f3530302e676966",
+            "https://i.pinimg.com/originals/bb/fa/30/bbfa30a752409dc211bda11676d4a2d8.gif",
+            "https://i.imgur.com/gdHaJcx.jpg",
+            "https://i.pinimg.com/originals/25/37/25/2537252d0dbd0fd09f1cea868be20d41.jpg",
+            "https://cdn.discordapp.com/attachments/915716932097966090/1203149291062042644/img.png?ex=65d00b18&is=65bd9618&hm=be05c1cd7396a09cf6061b5632c1f70898315fa625d1a6724ebbee53ec82e08b&",
+            "https://cdn.discordapp.com/attachments/1159361219040378911/1203179490897952788/5uOQDHtn_400x400.png?ex=65d02738&is=65bdb238&hm=5bb4fa644825d8773c4565db88c8e95e3d9a19980c9bd9d492ceb87ac88b51a1&",
+            "https://i.pinimg.com/736x/b7/db/c4/b7dbc466f2c6145c571ea9621e7534d6.jpg",
+            "https://i.pinimg.com/originals/dd/df/07/dddf0763916c977f322ae547d24f1228.jpg",
+            "https://i.pinimg.com/736x/cf/57/d5/cf57d5dfecf4da9705274a5518b7c6cd.jpg",
+            "https://avatarfiles.alphacoders.com/174/174725.jpg",
+            "https://i.pinimg.com/originals/7b/92/7a/7b927a00e2244d770aa90464438aae8f.gif",
+            "https://media.tenor.com/UNIPoE_D4fcAAAAC/envy-fullmetal-alchemist.gif",
+            "https://i.pinimg.com/originals/fb/4f/8a/fb4f8aa282555ce8de74fc6d2bfdd7b8.gif",
+            "https://media1.tenor.com/m/kF_m20pCRzMAAAAC/re-l-ergo-proxy.gif",
+            "https://davedalessiowrites.files.wordpress.com/2022/06/re-l-mayer.jpg",
+            "https://media1.tenor.com/m/oqI6Ds3UFmUAAAAC/lain-iwakura-lain.gif",
+            "https://media.tenor.com/v-d5E2Xnv_sAAAAM/lain-serial-experiments-lain.gif",
+            "https://i.pinimg.com/originals/d7/64/84/d76484f755763b87d45ec9c56e21b37c.gif",
+            "https://i.gifer.com/Bh1c.gif",
+            "https://i.pinimg.com/originals/f6/e3/ba/f6e3ba34ad26ef43ec875b672bd60b39.gif",
+            "https://avatarfiles.alphacoders.com/343/thumb-1920-343549.jpg",
+            "https://cdn.discordapp.com/attachments/1159361219040378911/1203183511553581076/asdf.png?ex=65d02af7&is=65bdb5f7&hm=a3c2fbfc81113298a176dac041b44d430d6195cbc2efef2ba83a81a0ab7c7114&",
+            "https://avatarfiles.alphacoders.com/234/234181.jpg",
+            "https://i.pinimg.com/originals/5d/bb/45/5dbb451fc779ec5b3eb6616e7d6d2e37.jpg",
+            "https://i.pinimg.com/736x/63/49/01/63490196b9a00fe1cf738a292b3f396c.jpg",
+            "https://cdn.discordapp.com/attachments/1159361219040378911/1203183815653064714/c2a643067604bf830651d426da4357cf2c55257a.png?ex=65d02b3f&is=65bdb63f&hm=ef96262c7db5517dd20fe0e85537272d7d40906b338f3720fa3dfe3767fdb6fa&",
+            "https://64.media.tumblr.com/06f939d1d5e159af36b8874b457efb97/90073fa4c16931f9-99/s640x960/189a44081e715fd2021c4e33baf247ca9a9270b1.jpg",
+
+
+
+
+
+
+
+        ];
+
         var randomIndex = Math.floor(Math.random() * imageList.length);
         return imageList[randomIndex];
     }
